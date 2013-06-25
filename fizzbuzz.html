@@ -1,0 +1,39 @@
+<html>
+<head>
+  <style type="text/css">
+		#fizzbuzz div:nth-child(3n), 
+		#fizzbuzz div:nth-child(5n) {
+			font-size: 0px;
+		}
+		
+		#fizzbuzz div:nth-child(3n):before {
+			font-size: medium;
+			content: "Fizz";	
+		}
+		
+		#fizzbuzz div:nth-child(5n):after {
+			font-size: medium;
+			content: "Buzz";
+		}
+	</style>
+</head>
+
+<body>
+	<div id="fizzbuzz">
+	</div>
+	
+	<script type="text/javascript">
+		// divs generation
+		var fizzbuzzContainer = document.getElementById('fizzbuzz');
+		
+		var min = 1;
+		var max = 100;
+		
+		for(var i= min; i<= max; i++) {
+			var newDiv = document.createElement("div");
+			newDiv.innerHTML = i;
+			fizzbuzzContainer.appendChild(newDiv);
+		}
+	</script>
+</body>
+</html>
